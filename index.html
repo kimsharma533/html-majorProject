@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+   
+   <nav class="navbar">
+    <ul>
+       <li><a href="#">EditKaro.in</a></li>
+       <li><a href="#">services</a></li>
+       <li><a href="#">contact</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Facilities</a></li>
+    </ul>
+   </nav>
+   <h1 >Welcome to EditKaro.in</h1>
+   <p>Experts in Social Media Marketing & Video Editing!</p>
+   <button>Get Started</button>
+
+
+
+   <div class="carousel">
+    <div class="carousel-images">
+        <img src="https://img.freepik.com/free-photo/flat-lay-minimal-flowers_23-2149176425.jpg?t=st=1728548087~exp=1728551687~hmac=161ce089e5434cdb37fcb91fdbcc5e7df360897da630e5f16197efbc09dd4573&w=300" alt="Image 1">
+        <img src="https://img.freepik.com/free-photo/close-up-beautiful-asian-woman-outdoors_23-2149032786.jpg?t=st=1728548278~exp=1728551878~hmac=6ad438e8995f2161d59404757c68fcf=5355fd4b170232f4cb5fb9a6736145dd2&w=300" alt="Image 2">
+        <img src="https://img.freepik.com/free-photo/top-view-photo-camera-notebook_23-2149678961.jpg?t=st=1728548338~exp=1728551938~hmac=3742c26720e127ac7352f634c43bb3529bbd3c884a3b422c020068a978f83bc7&w=360" alt="Image 3">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+</div>
+
+<div class="card-container">
+    <div class="card">
+        <img src="https://cdn.openshot.org/static/img/gallery/ui-example.jpg" alt="Card 1">
+        <h3>Video Editing</h3>
+        <p>
+        Process Overview: Video editing involves rearranging and manipulating footage to create a cohesive narrative, including cutting clips, adding transitions, and enhancing audio and visuals.
+            
+    </p>
+    </div>
+    <div class="card">
+        <img src="https://img.freepik.com/free-photo/high-angle-shot-lens-headphones-gimbal-phone_181624-43878.jpg?t=st=1728549564~exp=1728553164~hmac=bedb347708280ecee9b4b157e757c66320267a36e580a48d45789b30bf9e4c18&w=900" alt="Card 2">
+        <h3>Video Editing</h3>
+        <p>Content Refinement: Editing involves reviewing and revising written, audio, or visual materials to improve clarity.
+
+            Enhancement Techniques: Editors may also enhance the content by adding visuals.</p>
+    </div>
+    <div class="card">
+        <img src="https://img.freepik.com/free-photo/top-view-woman-wearing-pink-sweater_23-2148749920.jpg?t=st=1728548940~exp=1728552540~hmac=0efa04c9986b9f9ded1830d1eabed7e327f7c2baf6084768294eed898b749f48&w=360" alt="Card 3">
+        <h3>Photography Editing</h3>
+        <p>
+            Image Enhancement: Photography editing involves adjusting exposure, contrast, color balance, and sharpness to improve the overall quality and aesthetics of images.
+
+        </p>
+    </div>
+    <div class="card">
+        <img src="https://img.freepik.com/free-photo/retro-vhs-packaging-indoors_23-2150172435.jpg?t=st=1728548898~exp=1728552498~hmac=7abac2455e023c2dd60d5fa8a823782c81f478fa3a7676ebc16b3d4e97be2eed&w=360" alt="Card 4">
+        <h3>Gaming Videos</h3>
+        <p>
+            Highlighting Gameplay: Gaming video editing focuses on showcasing exciting gameplay moments, using fast cuts, effects, and commentary to enhance viewer engagement.
+
+        </p>
+    </div>
+    <div class="card">
+        <img src="https://img.freepik.com/free-vector/hand-drawn-cybersickness-illustration_52683-138083.jpg?t=st=1728549006~exp=1728552606~hmac=def1bb9ddea84b7f5c1723e42820682d6d9d57552323f70fa874e4b4d75c027d&w=740" alt="Card 5">
+        <h3>Social media editing</h3>
+        <p>Content Optimization: Social media editing involves tailoring videos and images to fit platform specifications, enhancing visuals with filters, text overlays, and branding elements for maximum engagement.</p>
+    </div>
+    <div class="card">
+        <img src="https://img.freepik.com/free-photo/close-up-view-bath-concept-marble-table_23-2148459887.jpg?t=st=1728549094~exp=1728552694~hmac=7cb421905749108763ae4227254deb902ef08fac8d0e40c745c9c8bda2aeab95&w=740" alt="Card 6">
+        <h3>E-Commerce Ads</h3>
+        <p>
+            Product Showcase: E-commerce video editing emphasizes dynamic visuals and quick cuts to effectively highlight product features.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <h2>Thanks for visting</h2>
+    <p>Contact us at:Gmail,Instagram <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+</footer>
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-images img');
+        if (index >= slides.length) currentSlide = 0;
+        if (index < 0) currentSlide = slides.length - 1;
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === currentSlide) ? 'block' : 'none';
+        });
+    }
+
+    function moveSlide(step) {
+        currentSlide += step;
+        showSlide(currentSlide);
+    }
+
+    
+</script>
+
+</body>
+</html>
